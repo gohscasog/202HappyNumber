@@ -6,14 +6,14 @@ int isHappy(int n)
     int nums[100];
 
     int sum = 0;
-    int dig = 0;
+    long long dig;
 
     while(sum >= 0)
     {
-        for(int i = 1; i <= n || i == 1; i *= 10)
+        for(long long i = 1LL; i <= n || i == 1LL; i *= 10LL)
         {
-            dig = (int) (n % (i * 10)) / i;
-            sum += dig * dig;
+            dig = (long long) (n % (i * 10LL)) / i;
+            sum += (int) dig * dig;
         }
 
         if(sum == 1)
